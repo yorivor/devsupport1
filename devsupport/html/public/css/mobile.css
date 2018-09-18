@@ -1,0 +1,91 @@
+@media screen and (max-width: 992px) {
+	html, body{
+		font-family: Arial;
+		background: url('../images/page_bg1.jpg');
+		margin: 0;
+		padding: 0;
+	}
+	a{
+		color:#fff;
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	.nav{
+		display: none;
+	}
+	.mobile-nav{
+		background: rgba(246,122,0, 0.7);
+		display: block;
+		overflow: hidden;
+		padding:10px;
+		z-index: 99999;
+	}
+	.mobile-nav .btn-menu{
+		background:transparent;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		float:right;
+		padding-top:5px;
+		border:2px solid #fff;
+	}
+	.menu-hover{
+		background: rgba(171,85,1, 0.9);
+		color:#fff;
+		display: none;
+		position:absolute;
+		width:100%;
+		z-index:3;
+	}
+	.mobile-nav .logo-m{
+		float: left;
+		width:25%;
+	}
+	/****************************************************************/
+	/*																*/
+	/*						  Home Section							*/
+	/*																*/
+	/****************************************************************/
+	#pagepiling{
+		display: none;
+	}
+	.m-place{
+		display: block;
+	}
+	.mobile-home{
+		display: block;
+	}
+	.mobile-home .m-sup{
+		-webkit-animation: appear-from-right 0.5s ease-in-out;
+    	animation: appear-from-right 0.5s ease-in-out;
+    	width: 70%;
+	}
+	.m-msg{
+		color:#000;
+		-webkit-animation: appear-from-bottom 2s ease-in-out;
+    	animation: appear-from-bottom 2s ease-in-out;
+	}
+	.mobile-home .abouting{
+		height:1000px;
+		
+	}
+	.page-body{
+		display: none;
+	}
+	.mobile-article{
+		display: block;
+	}
+	.article-box{
+		background: url('../images/dt-icon.png') center right no-repeat transparent;
+		background-size: contain;
+		height: 80px;
+	}
+	.title_article{
+		font-size:16px;
+	}
+	.para{
+		display: none;
+	}
+}
