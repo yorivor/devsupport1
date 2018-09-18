@@ -312,7 +312,6 @@ a:hover{
 #home .home-content .outage-announcement{
 	margin: 0 auto;
 	width:720px;
-	padding:10px;
 	font-size:20px;
 }
 #home .home-content .teacher{
@@ -360,7 +359,6 @@ a:hover{
 	z-index: -2;
 }
 #home .home-body .home-massage{
-	position: absolute;
 	color:#000;
 	font-size:24px;
 	height:60px;
@@ -368,8 +366,8 @@ a:hover{
 	line-height: 30px;
 	bottom:0;
 	margin: 0 auto;
-	width:100%;
 	text-align: center;
+	margin-top: 80px;
 }
 #home .home-body .home-massage .msg1.upp{
 	-webkit-animation: appear-from-bottom 2s ease-in-out;
@@ -451,15 +449,16 @@ a:hover{
 	width:64%;
 }
 .waitlang{
-	background:url('../images/waiting_time.png') no-repeat;
-	height: 108px;
+	background: #21b2e7;
 	margin: 0 auto; 
-	width:700px;
+	text-align: center;
+	width:800px;
+	padding: 10px;
 }
 .lesson{
-	padding:20px 0 0 105px;
-	color:#e5e5e5;
-	text-shadow: 1px 1px 1px #c0c0c0;
+	font-size: 22px;
+	font-weight: bold;
+	color:#f7e90e;
 }
 /****************************************************************/
 /*																*/
@@ -667,6 +666,11 @@ a:hover{
     bottom:0px;
     left:60%;
 }
+.button-chat-left{
+	position:fixed;
+    bottom:0px;
+    left:15%;
+}
 /****************************************************************/
 /*																*/
 /*						 	Lightbox Button						*/
@@ -720,7 +724,7 @@ a:hover{
 		width: 320px;
 	}
 	#home .home-body .home-content .home-logo{
-		top: 110px;
+		top: 15px;
 		width: 350px;
 	}
 	#home .home-body .home-bubble{
@@ -771,7 +775,7 @@ a:hover{
 		width: 320px;
 	}
 	#home .home-content .home-logo{
-		top: 110px;
+		top: 20px;
 		width: 350px;
 	}
 	#home .home-bubble{
@@ -784,7 +788,7 @@ a:hover{
 		width:100%;
 	}
 	#home .home-body .home-massage{
-		font-size:42px;
+		font-size:30px;
 		line-height: 45px;
 		bottom: 0;
 		width:100%;

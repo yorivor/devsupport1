@@ -5,16 +5,16 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Knowledge Base Management -> Top 10 KB</div>
+                <div class="panel-heading">LS Knowledge Base Management -> Top 10 KB</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('knowbase_top.post') }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('knowbase_top_ls.post') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('waiting_message') ? ' has-error' : '' }}">
                             <label for="waiting_message" class="col-md-4 control-label">Waiting Time: </label>
 
                             <div class="col-md-6">
-                                    @if(!$count)
+                                    @if(! $count)
                                         <input type="text" id="waiting_message" class="form-control" name="waiting_message" value="{{ old('waiting_message') }}" autofocus />
                                     @else
                                         <input type="text" id="waiting_message" class="form-control" name="waiting_message" value="{{ $check_top->waiting_time }}" autofocus />
@@ -32,7 +32,7 @@
                             <label for="number_one" class="col-md-4 control-label">1: </label>
 
                             <div class="col-md-6">
-                                <select id="number_one" type="text" class="form-control" name="number_one" required autofocus>
+                                <select id="number_one" type="text" class="form-control" name="number_one" autofocus>
                                     <option value="">None</option>
                                     <?php
                                         $one = DB::table('knowledge_article')->get();

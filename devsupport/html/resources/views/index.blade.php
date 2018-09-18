@@ -8,10 +8,24 @@
 					@else
 						<div class="marquee">
 							@foreach($article_outage as $outage_article)
-								<p><a href="{{ url('outage/'.$outage_article->article_id) }}">{{ $outage_article->article_title }}</a></p>
+								<a href="{{ url('outage/'.$outage_article->article_id) }}">
+									<div class="marquee-in">
+										
+											{{ $outage_article->article_title }}
+										
+									</div>
+								</a>
 							@endforeach
 						</div>
 					@endif
+					<div class="home-massage">
+						<div class="msg1 upp">
+							Hi Teacher, our Lesson Support Associates are available
+						</div>
+						<div class="msg2 up">
+							Mondays through Sundays, 6:00 AM to 12:00 AM, Beijing Time.
+						</div>
+					</div>
 				</div>
 				<div class="home-bubble bubbling">
 					<img src="{{ URL('images/img-bubble.png') }}" class="home-img" />
@@ -21,14 +35,6 @@
 				</div>
 				<div class="teacher present">
 					<img src="{{ URL('images/img-teacher.png') }}" class="home-img" />
-				</div>
-				<div class="home-massage">
-					<div class="msg1 upp">
-						Hi Teacher, our Lesson Support Associates are available
-					</div>
-					<div class="msg2 up">
-						Mondays through Sundays, 6:00 AM to 12:00 AM, Beijing Time.
-					</div>
 				</div>
 			</div>
 			<br />
@@ -59,21 +65,23 @@
 		            </ul>             
 		        @endif
 			</div>
-			@if($waiting_time->message_time == 0)
+			<br />
+			@if(! $timecount)
 			@else
-			<div class="row">
-				<div class="col-md-12">
-					<div class="waitlang">
-						<div class="lesson">
-							<h4>
-								Lesson support waiting time is {{ $waiting_time->message_time }} minutes.
-								If there's any <br /> 
-								technical concern please click technical help desk button.
-							</h4>
+				@if($lstop_articles->waiting_time == 0)
+				@else
+				<div class="row">
+					<div class="col-md-12">
+						<div class="waitlang">
+							<div class="lesson">
+								Lesson Support waiting time  {{ $lstop_articles->waiting_time }} minutes.
+								<br /> 
+								If there's any technical concern please click technical help desk button.
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+				@endif
 			@endif
 			<div class="home-border"></div>
 			<?php 

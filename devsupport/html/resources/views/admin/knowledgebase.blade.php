@@ -19,19 +19,19 @@
                         </div>
                         @if(Auth::user()->department == "Technical Team")
                         @else
-                        <div class="col-xs-6 col-sm-3 icons">
-                            <a href="{{ url('top_knowbase') }}" class="links-icon">
-                                <div class="glyphicon glyphicon-signal"></div>
-                                <div class="icon-title">Top Knowledge Base</div>
-                            </a>
-                        </div>
+                            <div class="col-xs-6 col-sm-3 icons">
+                                <a href="{{ url('ls_top_knowbase') }}" class="links-icon">
+                                    <div class="glyphicon glyphicon-tasks"></div>
+                                    <div class="icon-title">LS Top KB</div>
+                                </a>
+                            </div>
                         @endif
                         @if(Auth::user()->department == "Lesson Support")
                         @else
                             <div class="col-xs-6 col-sm-3 icons">
-                                <a href="{{ url('what_time') }}" class="links-icon">
-                                    <div class="glyphicon glyphicon-time"></div>
-                                    <div class="icon-title">LS Waiting Time</div>
+                                <a href="{{ url('top_knowbase') }}" class="links-icon">
+                                    <div class="glyphicon glyphicon-signal"></div>
+                                    <div class="icon-title">Top Knowledge Base</div>
                                 </a>
                             </div>
                         @endif

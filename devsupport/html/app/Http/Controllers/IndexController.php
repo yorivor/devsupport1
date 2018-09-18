@@ -21,10 +21,11 @@ class IndexController extends Controller
 
 
         // waiting time
-        $waiting_time = DB::table('waiting_time')->first();
+        $lstop_articles = DB::table('lstop_articles')->first();
+        $timecount = count($lstop_articles);
 
 
-        return view('index', ['count_outage' => $count_outage, 'article_outage' => $article_outage, 'waiting_time' => $waiting_time]);
+        return view('index', ['count_outage' => $count_outage, 'article_outage' => $article_outage, 'lstop_articles' => $lstop_articles, 'timecount' => $timecount]);
     }
 
     public function outage($id)

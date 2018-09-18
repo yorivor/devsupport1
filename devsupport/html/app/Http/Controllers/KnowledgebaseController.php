@@ -472,6 +472,100 @@ class KnowledgebaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function ls_top_knowbase(Request $request)
+    {
+        
+        $check_top = DB::table('lstop_articles')->first();
+        $count = count($check_top);
+
+        return view('/admin/ls_top_knowledgebase', ['check_top' => $check_top, 'count' => $count]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function createtopls(Request $request)
+    {
+        $check_top = DB::table('lstop_articles')->first();
+        $count = count($check_top);
+
+        $waiting_message = $request->input('waiting_message');
+        $number_one = $request->input('number_one');
+        $number_two = $request->input('number_two');
+        $number_three = $request->input('number_three');
+        $number_four = $request->input('number_four');
+        $number_five = $request->input('number_five');
+        $number_six = $request->input('number_six');
+        $number_seven = $request->input('number_seven');
+        $number_eight = $request->input('number_eight');
+        $number_nine = $request->input('number_nine');
+        $number_ten = $request->input('number_ten');
+        $created_at = date("Y-m-d H:i:s");
+        $updated_at = date("Y-m-d H:i:s");
+
+        if (!preg_match('/^[0-9]*$/', $waiting_message)) {
+            return redirect()->back()->with('waiting_message', 'Please input numbers only!');
+        } 
+        else 
+        {
+           if(! $count)
+            {
+                DB::table('lstop_articles')->insert([
+                [
+                    'waiting_time' => $waiting_message, 
+                    'article_one' => $number_one, 
+                    'article_two' => $number_two, 
+                    'article_three' => $number_three, 
+                    'article_four' => $number_four, 
+                    'article_five' => $number_five, 
+                    'article_six' => $number_six, 
+                    'article_seven' => $number_seven, 
+                    'article_eight' => $number_eight, 
+                    'article_nine' => $number_nine, 
+                    'article_ten' => $number_ten, 
+                    'created_at' => $created_at, 
+                    'updated_at' => $updated_at
+                    ]
+                ]);
+
+                DB::table('logs')->insert([
+                    ['message' => Auth::user()->name.' Create Top KB LS', 'created_at' => $created_at, 'updated_at' => $updated_at,]
+                ]);
+                return redirect()->back()->with('message', 'Top LS KB is successfully Created!');
+            }
+            else
+            {
+                DB::table('lstop_articles')->where('top_articles_id', $check_top->top_articles_id)->update([
+                    'waiting_time' => $waiting_message, 
+                    'article_one' => $number_one, 
+                    'article_two' => $number_two, 
+                    'article_three' => $number_three, 
+                    'article_four' => $number_four, 
+                    'article_five' => $number_five, 
+                    'article_six' => $number_six, 
+                    'article_seven' => $number_seven, 
+                    'article_eight' => $number_eight, 
+                    'article_nine' => $number_nine, 
+                    'article_ten' => $number_ten
+                ]);
+
+                 DB::table('logs')->insert([
+                    ['message' => Auth::user()->name.' Updated Top KB LS', 'created_at' => $created_at, 'updated_at' => $updated_at,]
+                ]);
+
+                return redirect()->back()->with('message', 'Top LS KB is successfully Updated!');
+            }
+        }
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function what_time()
     {
         

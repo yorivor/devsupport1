@@ -377,3 +377,9 @@ a:hover{
     bottom:0px;
     left:60%;
 }
+
+.button-chat-left{
+	position:fixed;
+    bottom:0px;
+    left:15%;
+}

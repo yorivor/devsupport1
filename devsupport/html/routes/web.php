@@ -35,6 +35,12 @@ Route::get('subcatknowledge/{id}', 'BaseKnowledgeController@subcatknowledge');
 Route::get('sublistknow/{id}/{subid}', 'BaseKnowledgeController@sublistknow');
 Route::get('descknow/{id}/{subid}/{usid}', 'BaseKnowledgeController@descknow');
 
+//LS Page
+Route::get('lstoparticles', 'LessonController@lstoparticles');
+Route::get('lssubcatknowledge/{id}', 'LessonController@lssubcatknowledge');
+Route::get('lssublistknow/{id}/{subid}', 'LessonController@lssublistknow');
+Route::get('lsdescknow/{id}/{subid}/{usid}', 'LessonController@lsdescknow');
+
 //Live search
 Route::get('search','BaseKnowledgeController@hanap');
 Route::get('/reach','BaseKnowledgeController@search');
@@ -42,9 +48,12 @@ Route::get('/reach','BaseKnowledgeController@search');
 //Ticket
 Route::get('ticketing','BaseKnowledgeController@ticketing');
 Route::post('ticketing', ['as' => 'ticketing.post', 'uses' => 'BaseKnowledgeController@ticks']);
-
 Route::get('outage_concern','BaseKnowledgeController@out_ticket');
 Route::post('outage_concern', ['as' => 'outage_concern.post', 'uses' => 'BaseKnowledgeController@outage_concern']);
+
+//LSTicket
+Route::get('lsticketing','LessonController@lsticketing');
+Route::post('lsticketing', ['as' => 'lsticketing.post', 'uses' => 'LessonController@lsticks']);
 
 Route::get('auth', 'LoginController@index');
 Auth::routes();
@@ -110,6 +119,9 @@ Route::post('knowbase_top', ['as' => 'knowbase_top.post', 'uses' => 'Knowledgeba
 Route::get('what_time', 'KnowledgebaseController@what_time');
 Route::post('time_what', ['as' => 'time_what.post', 'uses' => 'KnowledgebaseController@createwait']);
 
+//top ls kb
+Route::get('ls_top_knowbase', 'KnowledgebaseController@ls_top_knowbase');
+Route::post('knowbase_top_ls', ['as' => 'knowbase_top_ls.post', 'uses' => 'KnowledgebaseController@createtopls']);
 
 //Category Setup
 Route::get('category_setup/{id}', 'KnowledgebaseController@setup');
