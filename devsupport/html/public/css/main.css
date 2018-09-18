@@ -714,18 +714,17 @@ a:hover{
 		width: 1600px;
 	}
 	#home .home-body .home-content{
-		height: 420px;
-		margin-top: 120px;
+		height: 275px;
 	}
 	#home .home-body .home-content .outage-announcement{
 		width:850px;
 	}
 	#home .home-body .home-content .teacher{
-		width: 320px;
+		width: 230px;
 	}
 	#home .home-body .home-content .home-logo{
 		top: 15px;
-		width: 350px;
+		width: 250px;
 	}
 	#home .home-body .home-bubble{
 		right:170px;
@@ -755,57 +754,7 @@ a:hover{
 	}
 }
 
-/****************************************************************/
-/*																*/
-/*						  Big Screen							*/
-/*																*/
-/****************************************************************/
-@media screen and (min-width: 1390px) {
-	#home .home-body{
-		width: 1600px;
-	}
-	#home .home-content{
-		height: 420px;
-		margin-top: 120px;
-	}
-	#home .home-content .outage-announcement{
-		width:850px;
-	}
-	#home .home-content .teacher{
-		width: 320px;
-	}
-	#home .home-content .home-logo{
-		top: 20px;
-		width: 350px;
-	}
-	#home .home-bubble{
-		right:170px;
-		top:0;
-		width: 200px;
-	}
-	#home .home-body .home-border{
-		background-size:100%;
-		width:100%;
-	}
-	#home .home-body .home-massage{
-		font-size:30px;
-		line-height: 45px;
-		bottom: 0;
-		width:100%;
-		height:100px;
-	}
-	#home .home-img{
-		width:100%;
-	}
-	#outPopUp {
-		top: 20%;
-		left: 21.5%;
-	}
-	.outage-btn{
-		width: 320px;
-		font-size:20px;
-	}
-}
+
 /****************************************************************/
 /*																*/
 /*						  Mobile Section						*/
