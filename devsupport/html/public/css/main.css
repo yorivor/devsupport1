@@ -449,16 +449,21 @@ a:hover{
 	width:64%;
 }
 .waitlang{
-	background: #21b2e7;
+	background: rgba(33, 178, 231, 0.8);
 	margin: 0 auto; 
 	text-align: center;
-	width:800px;
-	padding: 10px;
+	width:920px;
+	padding: 20px;
+	border: 3px solid #ffffff;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 .lesson{
 	font-size: 22px;
 	font-weight: bold;
-	color:#f7e90e;
+	color:#000;
 }
 /****************************************************************/
 /*																*/

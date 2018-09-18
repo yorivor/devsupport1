@@ -76,7 +76,7 @@
 							<div class="lesson">
 								Lesson Support waiting time  {{ $lstop_articles->waiting_time }} minutes.
 								<br /> 
-								If there's any technical concern please click technical help desk button.
+								If you have a technical concern, please click the Technical Helpdesk bubble below.
 							</div>
 						</div>
 					</div>
